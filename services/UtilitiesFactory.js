@@ -7,6 +7,16 @@ questionList.factory('UtilitiesFactory', function() {
 				}
 			}
 			return null;
+		},
+
+		changeShowValue: function(value) {
+			if(value === true){
+				value = false;
+				return value;
+			}else{
+				value = true;
+				return value;
+			}
 		}
 	};
 
