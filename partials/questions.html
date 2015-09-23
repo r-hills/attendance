@@ -1,0 +1,26 @@
+<div ng-show="questions.length">
+	<h1>Questions Asked</h1>
+	<ul>
+		<li ng-repeat="item in questions">
+			<a ui-sref="questions.answers({ questionId: item.id})">{{item.text}}</a>
+				<!-- <button ng-click="add_answer = true" class"btn btn-primary"> -->
+					 <!-- </button>  -->
+		</li>
+	</ul>
+</div>
+
+<div class="col-md-4">
+	<h3>Ask a question</h3>
+	<form ng-submit="QuestionsFactory.addQuestion()" class="form-inline" role="form">
+		<div class="form-group">
+		<!-- <select ng-model="QuestionsFactory.categories" id="question_category" ng-show="questions.length">
+			<option ng-repeat="cat in QuestionsFactory.categories" value="cat">{{ QuestionsFactory.categories }}</option>
+		</select> -->
+			<input type="text" ng-model="QuestionsFactory.questionText" class="form-control" placeholder="Enter a question" required>
+		</div>
+
+		<button type="submit" class="btn btn-default">Submit</button>
+	</form>
+</div>
+
+<div ui-view></div>
