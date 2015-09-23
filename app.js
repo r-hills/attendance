@@ -11,6 +11,12 @@ questionList.config(function($stateProvider, $urlRouterProvider) {
 		templateUrl: "partials/questions.html",
 		controller: "QuestionsCtrl"
 	});
+	// $stateProvider.state('categories', {
+	// 	url:"/questions",
+	// 	templateUrl: "partials/questions.html",
+	// 	controller: "QuestionsCtrl"
+	// });
+	//
 
 	$stateProvider.state('questions.answers', {
 		url: "/:questionId",

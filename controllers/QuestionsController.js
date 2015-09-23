@@ -1,4 +1,5 @@
 questionList.controller('QuestionsCtrl', function QuestionsCtrl($scope, QuestionsFactory) {
 	$scope.questions = QuestionsFactory.questions;
-	$scope.QuestionsFactory = QuestionsFactory; 
+	$scope.categories = QuestionsFactory.categories;
+	$scope.QuestionsFactory = QuestionsFactory;
 });

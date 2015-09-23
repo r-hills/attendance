@@ -5,7 +5,7 @@ questionList.factory('QuestionsFactory', function QuestionsFactory () {
 
 
 	factory.addQuestion = function() {
-		factory.questions.push({ text: factory.questionText, id:factory.questions.length +1, answers: []});
+		factory.questions.push({ text: factory.questionText, id:factory.questions.length +1, answers: [], category: factory.questionCategory});
 		factory.questionText = null;
 	};
 	return factory;
