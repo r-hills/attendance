@@ -1,4 +1,4 @@
-<div ng-show="QuestionsFactory.show" class="row">
+<div ng-hide="show" class="row">
 	<div class="col-md-12">
 		<h3>Ask a question</h3>
 		<form ng-submit="QuestionsFactory.addQuestion()" class="form-inline" role="form">
@@ -16,9 +16,11 @@
 <div ng-show="questions.length">
 	<h1>Questions Asked</h1>
 	<ul>
-		<li ng-repeat="item in questions">
-			<button ng-click="UtilitiesFactory.changeShowValue(QuestionsFactory.show)" class"btn btn-primary"><a ui-sref="questions.answers({ questionId: item.id})">{{item.text}}</a></button>
-		</li>
+		<span ng-click="show = !show">
+			<li ng-repeat="item in questions">
+				<button class"btn btn-primary"><a ui-sref="questions.answers({ questionId: item.id})">{{item.text}}</a></button>
+			</li>
+		</span>
 	</ul>
 </div>
 

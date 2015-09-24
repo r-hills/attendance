@@ -9,13 +9,13 @@ questionList.factory('UtilitiesFactory', function() {
 			return null;
 		},
 
-		changeShowValue: function(value) {
-			if(value === true){
-				value = false;
-				return value;
+		changeShowValue: function() {
+			if(QuestionsFactory.show === true){
+				QuestionsFactory.show = false;
+				return QuestionsFactory.show;
 			}else{
-				value = true;
-				return value;
+				QuestionsFactory.show = true;
+				return QuestionsFactory.show;
 			}
 		}
 	};
