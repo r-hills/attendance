@@ -3,7 +3,13 @@ questionList.controller('QuestionsCtrl', function QuestionsCtrl($scope, Question
 	$scope.categories = QuestionsFactory.categories;
 	$scope.QuestionsFactory = QuestionsFactory;
 	$scope.questionCategory = QuestionsFactory.categories[0];
-	
+
+	$scope.cutString = function(inString) {
+		var shortString = inString.slice(0,20);
+		console.log(shortString);
+		return shortString;
+	}
+
 	//$scope.hide = QuestionsFactory.hideQuestionSubmit();
 
 	//var defaultCategory = QuestionsFactory.categories[0];

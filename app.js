@@ -1,12 +1,12 @@
 var questionList = angular.module('questionList', ['ui.router']);
 
 questionList.config(function($stateProvider, $urlRouterProvider) {
-	
+
 	// $stateProvider.state('home', {
 	// 	url: "",
 	// 	templateUrl: "partials/home.html"
 	// });
-	
+
 	$stateProvider.state('home', {
 		url: "",
 		templateUrl: "partials/home.html"
@@ -17,12 +17,13 @@ questionList.config(function($stateProvider, $urlRouterProvider) {
 		templateUrl: "partials/questions.html",
 		controller: "QuestionsCtrl"
 	});
-	// $stateProvider.state('categories', {
-	// 	url:"/questions",
-	// 	templateUrl: "partials/questions.html",
-	// 	controller: "QuestionsCtrl"
-	// });
-	//
+
+	$stateProvider.state('search', {
+		url:"/search-results",
+		templateUrl: "partials/search.html",
+		controller: "QuestionsCtrl"
+	});
+
 
 	$stateProvider.state('questions.answers', {
 		url: "/:questionId",

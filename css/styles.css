@@ -283,7 +283,11 @@ footer a:hover {
     background-color: transparent;
     text-decoration: underline
 }
-
+.shadow{
+  -moz-box-shadow: 3px 3px 4px 5px #ccc;
+  -webkit-box-shadow: 3px 3px 4px 5px #ccc;
+  box-shadow: 3px 3px 4px 5px #ccc
+}
 .footer-nav {
     display: -webkit-box;
     display: -webkit-flex;
@@ -333,7 +337,7 @@ footer a:hover {
 }
 
 #home-intro {
-    max-width: 735px;
+    max-width: 1000px;
     margin: 0 auto;
     padding-top: 30px;
     text-align: center
@@ -354,6 +358,17 @@ footer a:hover {
 
 #home-downloadbutton:hover {
     background-color: #7aab13
+}
+
+.search-button {
+   margin-right: 5px;
+
+}
+
+.search-button-div {
+  margin-top: 10px;
+   margin-right: 10px;
+   margin-left: 10px;
 }
 
 .blog-index time {
@@ -570,7 +585,9 @@ td.download-table-last > a {
 html {
     scroll-behavior: smooth
 }
-
+ul{
+  list-style-type:none;
+}
 #scrollToTop {
     font-size: 1rem;
     color: #333;

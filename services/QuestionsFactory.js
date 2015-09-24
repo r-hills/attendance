@@ -5,10 +5,16 @@ questionList.factory('QuestionsFactory', function QuestionsFactory () {
 	factory.show = true;
 
 	factory.addQuestion = function() {
-		factory.questions.push({ text: factory.questionText, id:factory.questions.length +1, answers: [], category: factory.questionCategory});
+		factory.questions.push({ 		 text: factory.questionText,
+																   id: factory.questions.length +1,
+															answers: [],
+														 answered: "Not Answererd",
+														 category: factory.questionCategory
+													});
 		factory.questionText = null;
 	};
-	
+
+
 	return factory;
 
 });

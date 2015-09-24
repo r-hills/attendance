@@ -1,10 +1,8 @@
 <div ng-show="question.answers.length">
 	<h2>Answers for {{ question.text }}</h2>
-	<ul>
-		<li ng-repeat="item in question.answers">
-			{{ item.text }}
-		</li>
-	</ul>
+		<h4 ng-repeat="item in question.answers">
+			{{ cutString(item.text) }}
+		</h4>
 </div>
 <div>
 	<h2>Add an answer to {{ question.text }}</h2>

@@ -7,8 +7,7 @@ questionList.factory('UtilitiesFactory', function() {
 				}
 			}
 			return null;
-		},
-
+		}
 
 	};
 

@@ -16,7 +16,11 @@
 <body>
   <header>
     <div class="col-md-12" ng-model="indexCategories">
-        <nav>
+        <nav id="menu">
+            <div class="row search-button-div">
+                <a type="button" class="btn btn-small btn-primary search-button" ui-sref='search'>Askr Search</a>
+                <input type="text" ng-model="query.text" class="form-control" placeholder="Search">
+            </div>
             <ul class="list-divider-pipe">
                 <li>
                     <a ui-sref="questions">Pool</a>
@@ -40,11 +44,12 @@
                     <a ui-sref="questions">Other4</a>
                 </li>
             </ul>
+
         </nav>
-  
+
     </div>
   </header>
-  <div class="container">
+  <div id="home-intro" class="well shadow">
     <div ui-view>
 
     </div>
