@@ -1,8 +1,13 @@
 <div ng-show="question.answers.length">
 	<h2>Answers for {{ question.text }}</h2>
-		<h4 ng-repeat="item in question.answers">
-			{{ cutString(item.text) }}
-		</h4>
+		<h5 ng-repeat="item in question.answers | orderBy:'-votes'" ng-model="toggleApproved">
+			<button ng-click="changeVote(item,1)"><span class="glyphicon glyphicon-chevron-up"></span></button>
+				{{ item.votes }}
+			<button ng-click="changeVote(item,-1)"><span class="glyphicon glyphicon-chevron-down"></span></button>
+			{{ cutString(item.text)}}
+			{{ item.approved ? " - Approved":" - Not Approved"}}
+			<input type="checkbox" ng-model="toggleApproved" ng-change="approveAnswer(item, toggleApproved)">
+		</h5>
 </div>
 <div>
 	<h2>Add an answer to {{ question.text }}</h2>

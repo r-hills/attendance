@@ -31,5 +31,11 @@ questionList.config(function($stateProvider, $urlRouterProvider) {
 		controller: "AnswersCtrl"
 	});
 
+	$stateProvider.state('category_search', {
+		url: "/:category",
+		templateUrl: "partials/category.html",
+		controller: "AnswersCtrl"
+	});
+
 
 });

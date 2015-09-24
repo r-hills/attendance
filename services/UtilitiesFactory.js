@@ -7,6 +7,15 @@ questionList.factory('UtilitiesFactory', function() {
 				}
 			}
 			return null;
+		},
+		findByCategory: function(collection, cat){
+			var matched = [];
+			for (var i = 0; i < collection.length; i++){
+				if (collection[i].category == cat){
+					matched.push(collection[i]);
+				}
+			}
+			return matched;
 		}
 
 	};

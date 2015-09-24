@@ -6,9 +6,15 @@ questionList.controller('QuestionsCtrl', function QuestionsCtrl($scope, Question
 
 	$scope.cutString = function(inString) {
 		var shortString = inString.slice(0,20);
-		console.log(shortString);
+		//console.log(shortString);
 		return shortString;
 	}
+
+	// $http.get('questions.json')
+	// 	.success(function (response) {
+	// 		$scope.questions = response;
+	// 	});
+
 
 	//$scope.hide = QuestionsFactory.hideQuestionSubmit();
 

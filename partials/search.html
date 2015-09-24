@@ -5,7 +5,7 @@
       <h2 ng-show="questions.length && filtered.length">Questions Matching Search</h2>
       <h2 ng-show="questions.length && !filtered.length">No Matches</h2>
       <ul>
-        <li ng-repeat="item in filtered = (questions | filter:query)">
+        <li ng-repeat="item in filtered = (questions | filter:query )">
           {{ item.text + " - " + item.answered  }}
         </li>
       </ul>

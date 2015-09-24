@@ -10,38 +10,41 @@
   <script src="controllers/AnswersController.js"></script>
   <script src="services/QuestionsFactory.js"></script>
   <script src="services/UtilitiesFactory.js"></script>
+  <script src="jquery-1.11.3.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
   <header>
-    <div class="col-md-12" ng-model="indexCategories">
+    <div class="col-md-12" ng-model="indexCategories" >
         <nav id="menu">
             <div class="row search-button-div">
                 <a type="button" class="btn btn-small btn-primary search-button" ui-sref='search'>Askr Search</a>
                 <input type="text" ng-model="query.text" class="form-control" placeholder="Search">
             </div>
-            <ul class="list-divider-pipe">
+            <ul class="list-divider-pipe" ng-controller="AnswersCtrl">
+              <li>
+                <a href="/">Home</a>
+              </li>
                 <li>
-                    <a ui-sref="questions">Pool</a>
+                    <a ui-sref="category_search({category:'Pool'})">Pool</a>
                 </li>
                 <li>
-                    <a ui-sref="questions">Drums</a>
+                    <a ui-sref="category_search({category:'Drums'})">Drums</a>
                 </li>
                 <li>
-                    <a ui-sref="questions">Copy-Paste</a>
+                    <a ui-sref="category_search({category:'Copy-Paste'})">Copy-Paste</a>
                 </li>
                 <li>
-                    <a ui-sref="questions">Other1</a>
+                    <a ui-sref="category_search({category:'Brain Surgury'})">Brain Surgury</a>
                 </li>
                 <li>
-                    <a ui-sref="questions">Other2</a>
+                    <a ui-sref="category_search({category:'Pizza'})">Pizza</a>
                 </li>
                 <li>
-                    <a ui-sref="questions">Other3</a>
-                </li>
-                <li>
-                    <a ui-sref="questions">Other4</a>
+                    <a ui-sref="category_search({category:'Misc'})">Misc</a>
                 </li>
             </ul>
 

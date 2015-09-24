@@ -17,13 +17,11 @@
 </div>
 <div ng-show="questions.length">
 	<h1>Questions Asked</h1>
-	<ul>
 		<span ng-click="showAnswers = true">
-			<li ng-repeat="item in questions">
+			<h5 ng-repeat="item in questions">
 				<a ui-sref='questions.answers({ questionId: item.id})'>{{ '"' + cutString(item.text) }}{{ item.text.length > 25 ? '..."':'"' }}</a>
-			</li>
+			</h5>
 		</span>
-	</ul>
 </div>
 <div ui-view></div>
 <!-- BACK BUTTON shows up when question.answers view renders -->
