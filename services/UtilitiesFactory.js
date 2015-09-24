@@ -9,15 +9,7 @@ questionList.factory('UtilitiesFactory', function() {
 			return null;
 		},
 
-		changeShowValue: function() {
-			if(QuestionsFactory.show === true){
-				QuestionsFactory.show = false;
-				return QuestionsFactory.show;
-			}else{
-				QuestionsFactory.show = true;
-				return QuestionsFactory.show;
-			}
-		}
+
 	};
 
 });

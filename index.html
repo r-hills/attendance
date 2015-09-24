@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en" ng-app="questionList">
 <head>
   <meta charset="UTF-8">
@@ -11,10 +11,43 @@
   <script src="services/QuestionsFactory.js"></script>
   <script src="services/UtilitiesFactory.js"></script>
   <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
+  <header>
+    <div class="col-md-12" ng-model="indexCategories">
+        <nav>
+            <ul class="list-divider-pipe">
+                <li>
+                    <a ui-sref="questions">Pool</a>
+                </li>
+                <li>
+                    <a ui-sref="questions">Drums</a>
+                </li>
+                <li>
+                    <a ui-sref="questions">Copy-Paste</a>
+                </li>
+                <li>
+                    <a ui-sref="questions">Other1</a>
+                </li>
+                <li>
+                    <a ui-sref="questions">Other2</a>
+                </li>
+                <li>
+                    <a ui-sref="questions">Other3</a>
+                </li>
+                <li>
+                    <a ui-sref="questions">Other4</a>
+                </li>
+            </ul>
+        </nav>
+  
+    </div>
+  </header>
   <div class="container">
-    <div ui-view></div>
+    <div ui-view>
+
+    </div>
   </div>
 </body>
 </html>

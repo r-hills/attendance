@@ -1,6 +1,12 @@
 var questionList = angular.module('questionList', ['ui.router']);
 
 questionList.config(function($stateProvider, $urlRouterProvider) {
+	
+	// $stateProvider.state('home', {
+	// 	url: "",
+	// 	templateUrl: "partials/home.html"
+	// });
+	
 	$stateProvider.state('home', {
 		url: "",
 		templateUrl: "partials/home.html"

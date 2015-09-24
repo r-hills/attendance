@@ -3,6 +3,8 @@ questionList.controller('QuestionsCtrl', function QuestionsCtrl($scope, Question
 	$scope.categories = QuestionsFactory.categories;
 	$scope.QuestionsFactory = QuestionsFactory;
 	$scope.questionCategory = QuestionsFactory.categories[0];
+	
+	//$scope.hide = QuestionsFactory.hideQuestionSubmit();
 
-	var defaultCategory = QuestionsFactory.categories[0];
+	//var defaultCategory = QuestionsFactory.categories[0];
 });

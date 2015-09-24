@@ -5,6 +5,7 @@ questionList.controller('AnswersCtrl', function AnswersCtrl($scope, $stateParams
 		$scope.answerText = null;
 	};
 
+
 });
 
 // change approve status
