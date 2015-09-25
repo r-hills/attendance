@@ -3,7 +3,15 @@
 <div class="row">
 	<div class="col-sm-5">
 		<div ng-model="updateLogin" ng-repeat="item in students">
-			<p > {{ item.name }} </p>
+			<p> 
+				<!-- Display SignIn button if logged out -->
+				<a ng-click="updateLoginStatus(item)" class="btn btn-small btn-success" ng-hide="item.loggedIn"> Sign In </a>
+
+				<!-- Display LogOut button if signed In -->
+				<a ng-click="updateLoginStatus(item)" class="btn btn-small btn-warning" ng-show="item.loggedIn">Log Out</a>
+
+				<span class="name-display"> {{ " " + item.name }} is {{ item.loggedIn ? " In":" Out"}} </span>
+			</p>
 		</div>
 	</div>
 </div> 
