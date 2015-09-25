@@ -2,7 +2,7 @@
 
 <div class="row">
 	<div class="col-sm-5">
-		<div ng-model="updateLogin" ng-repeat="item in students">
+		<div ng-model="updateLogin" ng-repeat="item in students | orderBy:'name' | orderBy:'loggedIn'">
 			<p> 
 				<!-- Display SignIn button if logged out -->
 				<a ng-click="updateLoginStatus(item)" class="btn btn-small btn-success" ng-hide="item.loggedIn"> Sign In </a>
