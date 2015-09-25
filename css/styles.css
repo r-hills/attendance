@@ -1,8 +1,18 @@
-.class-name {
-	font: bolder;
-	font-size: 18px; 
+.name-display {
+	font: bold;
+	font-size: 16px; 
 	font-weight: bolder;
 
 }
 
+.signin-buttons {
+	padding-top: 10px; 
+}
 
+.signin-labels {
+	padding-top: 25px; 
+}
+
+.navigate {
+	padding-top: 25px; 
+}

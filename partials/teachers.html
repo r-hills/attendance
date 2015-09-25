@@ -5,7 +5,7 @@
 		<h4 ng-show="loggedInStudents.length">Here: </h4>
 		<h4 ng-hide="loggedInStudents.length">No Students currently Signed In </h4>	
 		<ul ng-model="updateLogin">	
-			<li ng-repeat="item in loggedInStudents = (students | filter:loggedIn=true)"> {{ item.name }} is Signed In </li>
+			<li ng-repeat="item in loggedInStudents = (students | filter:loggedIn=true)"> {{ item.name }} </li>
 		</ul>
 	</div>
 </div>
@@ -14,7 +14,7 @@
 		<h4 ng-show="loggedOutStudents.length">Not Here: </h4>
 		<h4 ng-hide="loggedOutStudents.length">No Students currently Signed Out </h4>	
 		<ul ng-model="updateLogin">	
-			<li ng-repeat="item in loggedOutStudents = (students | filter:loggedIn=false)"> {{ item.name }} is Signed Out </li>
+			<li ng-repeat="item in loggedOutStudents = (students | filter:loggedIn=false)"> {{ item.name }} </li>
 		</ul>
 	</div>
 </div> 

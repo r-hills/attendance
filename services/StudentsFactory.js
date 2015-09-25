@@ -1,15 +1,21 @@
 attendanceTracker.factory('StudentsFactory', function QuestionsFactory() {
-	var factory = {}; 
-	factory.students = [ { name: "Betsy",   loggedIn: false },
-						 { name: "Bob",     loggedIn: false },
-						 { name: "Harriot", loggedIn: false },
-						 { name: "Henry",   loggedIn: false },
-						 { name: "Apple",   loggedIn: false }
-					   ];
-	
-	return factory; 
+    var factory = {}; 
+    factory.students = [ { name: "Claire Voyant",   loggedIn: false },
+                         { name: "Anne Thrax",      loggedIn: false },
+                         { name: "Allen Rench",     loggedIn: false },
+                         { name: "Bill Board",      loggedIn: false },
+                         { name: "Anita Job",       loggedIn: false },
+                         { name: "Dwayne Pipe",     loggedIn: false },
+                         { name: "Ginger Vitus",    loggedIn: false },
+                         { name: "Barb Dwyer",      loggedIn: false },
+                         { name: "Onya Bike",       loggedIn: false },
+                         { name: "Randy Gaunlet",   loggedIn: false },
+
+                       ];
+    
+    return factory; 
 }); 
 
 
 
-// { Name: "", LoggedIn: false },
+// { name: "", loggedIn: false },
