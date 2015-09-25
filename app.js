@@ -11,7 +11,7 @@ attendanceTracker.config(function($stateProvider, $urlRouterProvider) {
 	$stateProvider.state('teachers', {
 		url: "/teachers",
 		templateUrl: "partials/teachers.html",
-//		controller: "TeachersCtrl"
+		controller: "StudentsCtrl"
 	}); 
 
 	$stateProvider.state('students', {

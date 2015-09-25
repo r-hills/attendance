@@ -1,3 +1,15 @@
-<div class="teachers">
-	<h3>We are in Teachers page</h3>
+<h3>View Current Student Login Status</h3>
+
+<div class="row">
+	<div class="col-sm-5">
+		<div ng-model="updateLogin" ng-repeat="item in students">
+			<p > {{ item.name }} is {{ item.loggedIn ? "Signed In":"Signed Out" }} </p>
+		</div>
+	</div>
+</div> 
+
+<div class="row">
+	<div class="col-sm-5">
+		<a ui-sref="home" class="btn btn-info"><span class="glyphicon glyphicon-home" aria-hidden="true"></span> Home </a>
+	</div>
 </div>
