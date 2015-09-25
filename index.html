@@ -1,61 +1,22 @@
 <!DOCTYPE html>
 <html lang="en" ng-app="questionList">
 <head>
-  <meta charset="UTF-8">
-  <title>Askr</title>
+  <title>AngularJS</title>
   <script src="lib/angular.js"></script>
   <script src="lib/angular-ui-router.js"></script>
   <script src="app.js"></script>
-  <script src="controllers/QuestionsController.js"></script>
-  <script src="controllers/AnswersController.js"></script>
-  <script src="services/QuestionsFactory.js"></script>
-  <script src="services/UtilitiesFactory.js"></script>
   <script src="jquery-1.11.3.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="css/bootstrap.min.css">
-  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-  <header>
-    <div class="col-md-12" ng-model="indexCategories" >
-        <nav id="menu">
-            <div class="row search-button-div">
-                <a type="button" class="btn btn-small btn-primary search-button" ui-sref='search'>Askr Search</a>
-                <input type="text" ng-model="query.text" class="form-control" placeholder="Search">
-            </div>
-            <ul class="list-divider-pipe" ng-controller="AnswersCtrl">
-              <li>
-                <a href="/">Home</a>
-              </li>
-                <li>
-                    <a ui-sref="category_search({category:'Pool'})">Pool</a>
-                </li>
-                <li>
-                    <a ui-sref="category_search({category:'Drums'})">Drums</a>
-                </li>
-                <li>
-                    <a ui-sref="category_search({category:'Copy-Paste'})">Copy-Paste</a>
-                </li>
-                <li>
-                    <a ui-sref="category_search({category:'Brain Surgury'})">Brain Surgury</a>
-                </li>
-                <li>
-                    <a ui-sref="category_search({category:'Pizza'})">Pizza</a>
-                </li>
-                <li>
-                    <a ui-sref="category_search({category:'Misc'})">Misc</a>
-                </li>
-            </ul>
-
-        </nav>
-
+  <div class="container">
+   <h1>Welcome to AttendanceCheck...r</h1>
+   <p class="lead">A site for Teachers to monitor Student logins and logouts </p>
+    <div class="action-buttons">
+      <a class="btn btn-large btn-info" href="/admins/sign_in">Teacher log in</a>
+      <a class="btn btn-large btn-info" href="/student/sign_in">Student log in</a>
     </div>
-  </header>
-  <div id="home-intro" class="well shadow">
-    <div ui-view>
-
-    </div>
-  </div>
+  </div> <!-- End of container -->
 </body>
 </html>
