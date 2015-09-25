@@ -5,19 +5,43 @@ attendanceTracker.config(function($stateProvider, $urlRouterProvider) {
 
 	$stateProvider.state('home', {
 		url: "",
-		templateUrl: "partials/home.html"
+		views: {
+			'body': {
+				templateUrl: "partials/home.html"
+			},
+			'footer': {
+				templateUrl: "partials/footer.html",
+				controller: "HeaderCtrl"
+			},
+		}
 	});
 
 	$stateProvider.state('teachers', {
 		url: "/teachers",
-		templateUrl: "partials/teachers.html",
-		controller: "StudentsCtrl"
+		views: {
+			'body': {
+				templateUrl: "partials/teachers.html",
+				controller: "TeachersCtrl"
+			},
+			'footer': {
+				templateUrl: "partials/footer.html",
+				controller: "HeaderCtrl"
+			},
+		}		
 	}); 
 
 	$stateProvider.state('students', {
 		url: "/students",
-		templateUrl: "partials/students.html",
-		controller: "StudentsCtrl"
+		views: {
+			'body': {
+				templateUrl: "partials/students.html",
+				controller: "StudentsCtrl"
+			},
+			'footer': {
+				templateUrl: "partials/footer.html",
+				controller: "HeaderCtrl"
+			},
+		}		
 	});
 
 
