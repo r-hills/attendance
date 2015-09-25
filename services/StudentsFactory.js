@@ -1,13 +1,13 @@
 attendanceTracker.factory('StudentsFactory', function QuestionsFactory() {
 	var factory = {}; 
-	factory.students = [ { Name: "Betsy",   LoggedIn: false },
-						 { Name: "Bob",     LoggedIn: false },
-						 { Name: "Harriot", LoggedIn: false },
-						 { Name: "Henry",   LoggedIn: false },
-						 { Name: "Apple",   LoggedIn: false }
+	factory.students = [ { name: "Betsy",   loggedIn: false },
+						 { name: "Bob",     loggedIn: false },
+						 { name: "Harriot", loggedIn: false },
+						 { name: "Henry",   loggedIn: false },
+						 { name: "Apple",   loggedIn: false }
 					   ];
 	
-
+	return factory; 
 }); 
 
 
