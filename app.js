@@ -1,40 +1,23 @@
-var questionList = angular.module('questionList', ['ui.router']);
+var attendanceTracker = angular.module('attendanceTracker',['ui.router']);
 
-questionList.config(function($stateProvider, $urlRouterProvider) {
 
-	// $stateProvider.state('home', {
-	// 	url: "",
-	// 	templateUrl: "partials/home.html"
-	// });
+attendanceTracker.config(function($stateProvider, $urlRouterProvider) {
 
 	$stateProvider.state('home', {
 		url: "",
 		templateUrl: "partials/home.html"
 	});
 
-	$stateProvider.state('questions', {
-		url:"/questions",
-		templateUrl: "partials/questions.html",
-		controller: "QuestionsCtrl"
-	});
+	$stateProvider.state('teachers', {
+		url: "/teachers",
+		templateUrl: "partials/teachers.html",
+//		controller: "TeachersCtrl"
+	}); 
 
-	$stateProvider.state('search', {
-		url:"/search-results",
-		templateUrl: "partials/search.html",
-		controller: "QuestionsCtrl"
-	});
-
-
-	$stateProvider.state('questions.answers', {
-		url: "/:questionId",
-		templateUrl: "partials/questions.answers.html",
-		controller: "AnswersCtrl"
-	});
-
-	$stateProvider.state('category_search', {
-		url: "/:category",
-		templateUrl: "partials/category.html",
-		controller: "AnswersCtrl"
+	$stateProvider.state('students', {
+		url: "/students",
+		templateUrl: "partials/students.html",
+//		controller: "StudentsCtrl"
 	});
 
 
